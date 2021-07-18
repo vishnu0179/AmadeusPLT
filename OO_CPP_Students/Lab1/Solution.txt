@@ -1,0 +1,22 @@
+There are 2 files for every class: One is the .cpp file and the other is the .h file.
+
+- .h file contains the declration of the classes and its members
+- cpp file contains the implementation and definition of the methods of the class.
+
+There is an Account class havong account_no, name and balance as its data members.
+It is also having class AccountManager1 as its friend function.
+The Account.cpp file contains the implementation of getter and setters of the Account class data members.
+
+AccountManager1 and AccountManager2 class both contains same methods:
+- FillAccountData -> For filling the account details. It takes Account object as argument
+- DisplayAccountData -> Display the account details. It also takes Account object as an argument.
+
+FillAccountData and DisplayAccountData of AccountManager1 is directly modifying and accessing the Account class private variables as it is a friend class of Account.
+FillAccountData and DisplayAccountData of AccountManager2 is using getters and setters for modifying and accessing the Account class private variables.
+
+
+AccountManager1 is not able to add ICI prefix as it is not using the setter to modify the variable.
+AccountManager2 is getting the "ICI" prefix due to the use of setter.
+
+AccountManager1 is not able to add compund interest while setting the balance as it is directly setting the value of the data members.
+whereas AccountManager2 is using setter to set the value so compund interest is added in the account balance.
